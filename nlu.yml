@@ -1,0 +1,218 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: diet_enter
+  examples: |
+    - Diet?
+    - diet?
+    - okay
+    - continue
+    - diet
+- intent: Quick_and_Instant_diet_Plan
+  examples: |
+    - instant diet Plan
+    - options
+- intent: 1_week_diet_plan
+  examples: |
+    - 1 week diet plan
+- intent: Vegetaraian_diet_plan
+  examples: |
+    - Vegetaraian diet plan
+- intent: keto_diet_plan
+  examples: |
+    - keto diet plan
+- intent: sugar_detox_diet_plan
+  examples: |
+    - sugar detox diet plan
+- intent: Weight_loss_diet_plan
+  examples: |
+    - weight loss diet plan
+- intent: ask_meal_plan
+  examples: |
+    - want a diet plan
+    - diet plan
+    - meal plan
+    - ask_meal_plan
+- intent: tell_diet
+  examples: |
+    - [Gluten Free](diet related)
+    - [Ketogenic](diet related)
+    - [Vegetarian](diet related)
+    - [Lacto-Vegetarian](diet related)
+    - [Ovo-Vegetarian](diet related)
+    - [Vegan](diet related)
+    - [Pescetarian](diet related)
+    - [Paleo](diet related)
+    - [Primal](diet related)
+    - [Whole30](diet related)
+    - [vegan](diet related)
+- intent: tell_allergy
+  examples: |
+    - [Dairy](allergy related)
+    - [Egg](allergy related)
+    - [Gluten](allergy related)
+    - [Grain](allergy related)
+    - [Peanut](allergy related)
+    - [Seafood](allergy related)
+    - [Sesame](allergy related)
+    - [Soy](allergy related)
+    - [Sulfite](allergy related)
+    - [none](allergy related)
+    - [Wheat](allergy related)
+- intent: tell_calories
+  examples: |
+    - [1100](calorie related)
+    - [1200](calorie related)
+    - [1400](calorie related)
+    - [1600](calorie related)
+    - [1700](calorie related)
+    - [1800](calorie related)
+    - [1900](calorie related)
+    - [1300](calorie related)
+- intent: type_nutrition
+  examples: |
+    - nutrition
+    - nutri
+    - i want to know nutritional information
+- intent: nutrition_answer
+  examples: |
+    - [1 banana](Ingredients and Quantity)
+    - [5 tomato](Ingredients and Quantity)
+    - [7 cucumber](Ingredients and Quantity)
+    - [2 apples](Ingredients and Quantity)
+    - [5 oranges](Ingredients and Quantity)
+    - [5 apples](Ingredients and Quantity)
+    - [3 cabbage](Ingredients and Quantity)
+- intent: type_query
+  examples: |
+    - i want a recipe
+    - recipe
+- intent: type_food_query
+  examples: |
+    - [salad](recipe related)
+    - [vada pav](recipe related)
+    - [pizza](recipe related)
+    - [rice](recipe related)
+    - [misal pav](recipe related)
+    - [Hara bhara kabab](recipe related)
+    - [chickpea and spinach curry](recipe related)
+    - [Daliya](recipe related)
+    - [Idli](recipe related)
+    - [rawa upma](recipe related)
+    - [Poha](recipe related)
+    - [Chilla](recipe related)
+    - want recipe for rice
+    - [butter chicken](recipe related)
+    - [Paneer Biryani](recipe related)
+    - [Kolkata Biryani](recipe related)
+    - [Rajma chawal](recipe related)
+    - [Chana masala](recipe related)
+    - [Paneer butter masala](recipe related)
+    - [Kadhi chawal](recipe related)
+    - [Masala dosa](recipe related)
+    - [Palak paneer](recipe related)
+    - [Veg pulao](recipe related)
+    - [Chana dal](recipe related)
+    - [Dal fry](recipe related)
+    - [oats smoothie](recipe related)
+- intent: type_question
+  examples: |
+    - i have a query
+    - i have a question
+    - i have a health related question
+- intent: tell_question
+  examples: |
+    - [how many carbs in tofu](food related)
+    - [how many calories in oats](food related)
+    - [how much vitamin D in apple](food related)
+    - [how much vitamin C in orange](food related)
+    - [how much calories in cucumber](food related)
+    - [how much calories in mango](food related)
+    - [how much calories in cabbage](food related)
+    - [how much vitamin C in kiwi](food related)
+- intent: food_tracker
+  examples: |
+    - food tracker
+    - track my food

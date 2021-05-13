@@ -1,0 +1,149 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say this
+  steps:
+  - intent: Quick_and_Instant_diet_Plan
+  - action: utter_diet_Plan
+
+- rule: Say this
+  steps:
+  - intent: 1_week_diet_plan
+  - action: utter_week_diet_plan
+  - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+  - intent: Vegetaraian_diet_plan
+  - action: utter_Vegetaraian_diet_plan
+  - action: utter_next_sentence
+
+
+- rule: Say this
+  steps:
+  - intent: 1_week_diet_plan
+  - action: utter_week_diet_plan
+  - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+  - intent: vegan_diet_plan
+  - action: utter_vegan_diet_plan
+  - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+  - intent: keto_diet_plan
+  - action: utter_keto_diet_plan
+  - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+  - intent: sugar_detox_diet_plan
+  - action: utter_sugar_detox_diet_plan
+  - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+  - intent: Weight_loss_diet_plan
+  - action: utter_Weight_loss_diet_plan
+  - action: utter_next_sentence
+
+- rule: Say this anytime the user
+  steps:
+  - action: utter_ask_diet
+  - intent: tell_diet
+  - action: utter_ask_allergy
+
+- rule: Say this anytime the user
+  steps:
+  - intent: tell_allergy
+  - action: utter_ask_target_calories
+
+- rule: Say diet anytime the user
+  steps:
+  - intent: tell_calories
+  - action: action_meal_plan
+  - action: utter_next_sentence
+
+- rule: Say diet anytime the user
+  steps:
+  - intent: type_nutrition
+  - action: utter_nutrition_question
+
+
+- rule: Say this
+  steps:
+  - intent: nutrition_answer
+  - action: action_nutrition
+  - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+  - intent: type_query
+  - action: utter_food_question
+
+- rule: Say this
+  steps:
+  - intent: type_food_query
+  - action: action_recipe_answer
+  - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+    - intent: food_tracker
+    - action: utter_food_tracker
+    - action: utter_next_sentence
+
+#- rule: Say this
+#  steps:
+#    - intent: type_video_query
+#    - action: action_video
+#    - action: utter_next_sentence
+
+- rule: Say this
+  steps:
+    - intent: type_question
+    - action: utter_type_que
+
+- rule: Say this
+  steps:
+    - intent: tell_question
+    - action: action_food_answer
+    - action: utter_next_sentence
+
+
+
+
+#- rule: Activate form
+#  steps:
+#  - intent: user_profile
+#  - action: user_details_form
+#  - active_loop: user_details_form
+#
+#- rule: Submit form
+#  condition:
+#  # Condition that form is active.
+#  - active_loop: user_details_form
+#  steps:
+#  # Form is deactivated
+#  - action: user_details_form
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  # The actions we want to run when the form is submitted.
+#  - action: action_submit
+
+
+

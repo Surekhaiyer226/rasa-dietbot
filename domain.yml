@@ -1,0 +1,191 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- diet_enter:
+    use_entities: true
+- Quick_and_Instant_diet_Plan:
+    use_entities: true
+- 1_week_diet_plan:
+    use_entities: true
+- Vegetaraian_diet_plan:
+    use_entities: true
+- vegan_diet_plan:
+    use_entities: true
+- keto_diet_plan:
+    use_entities: true
+- sugar_detox_diet_plan:
+    use_entities: true
+- Weight_loss_diet_plan:
+    use_entities: true
+- ask_meal_plan:
+    use_entities: true
+- tell_diet:
+    use_entities: true
+- tell_allergy:
+    use_entities: true
+- tell_calories:
+    use_entities: true
+- type_nutrition:
+    use_entities: true
+- nutrition_answer:
+    use_entities: true
+- type_query:
+    use_entities: true
+- type_food_query:
+    use_entities: true
+- type_question:
+    use_entities: true
+- tell_question:
+    use_entities: true
+- food_tracker:
+    use_entities: true
+- user_profile:
+    use_entities: true
+entities:
+- diet related
+- allergy related
+- calorie related
+- Ingredients and Quantity
+- recipe related
+- food related
+slots:
+  diet related:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  allergy related:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  calorie related:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  Ingredients and Quantity:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  recipe related:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  food related:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Welcome!!!Type'diet'to proceed
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_diet:
+  - buttons:
+    - payload: instant diet Plan
+      title: Quick and Instant diet Plan
+    - payload: want a diet plan
+      title: Get Your Daily Meal Plan
+    - payload: food tracker
+      title: My Food Tracker
+    - payload: i want to know nutritional information
+      title: Get Nutritional Info of Ingredients
+    - payload: i want a recipe
+      title: Get Recipe
+    - payload: type_question
+      title: Get Nutrition related query clear
+    text: Please select or click on any below options as per your requirement....Also don't forget to setup your profile:)
+  utter_diet_Plan:
+  - buttons:
+    - payload: 1_week_diet_plan
+      title: 1 week diet plan
+    - payload: Vegetaraian_diet_plan
+      title: Vegetaraian diet plan
+    - payload: vegan_diet_plan
+      title: vegan diet plan
+    - payload: keto_diet_plan
+      title: keto diet plan
+    - payload: sugar_detox_diet_plan
+      title: sugar detox diet plan
+    - payload: Weight_loss_diet_plan
+      title: Weight loss diet plan
+    text: Please select or click on any below options as per your requirement
+  utter_week_diet_plan:
+  - image: https://i.pinimg.com/564x/40/95/b8/4095b8209779c8679da13f59899ab087.jpg
+    text: 'Here you go:'
+  utter_Vegetaraian_diet_plan:
+  - image: https://mk0possiblecpjio0thl.kinstacdn.com/wp-content/uploads/2020/11/7-Day-Vegetarian-Diet-Plan-For-Weight-Loss-compressed.jpg
+    text: 'Here you go:'
+  utter_vegan_diet_plan:
+  - image: https://i.pinimg.com/564x/1d/35/71/1d3571da0889a8d03f0b153c91bcddf1.jpg
+    text: 'Here you go:'
+  utter_keto_diet_plan:
+  - image: https://healthyhappysmart.com/blog/wp-content/uploads/2017/06/Meal-Plan-sample.png
+    text: 'Here you go:'
+  utter_sugar_detox_diet_plan:
+  - image: https://www.furtherfood.com/wp-content/uploads/2017/01/unnamed-1.png
+    text: 'Here you go:'
+  utter_Weight_loss_diet_plan:
+  - image: https://cdn2.stylecraze.com/wp-content/uploads/2013/12/Crash-Diet.jpg.webp
+    text: 'Here you go:'
+  utter_next_sentence:
+  - text: Type 'options' to proceed with more options OR Type 'diet' to continue
+  utter_ask_diet:
+  - text: Type your Diet
+  utter_ask_allergy:
+  - text: Type your Allergics
+  utter_ask_target_calories:
+  - text: Type your Target Calories
+  utter_nutrition_question:
+  - text: Type Ingredient and Quantity
+  utter_food_question:
+  - text: Type Recipe Name
+  utter_type_que:
+  - text: Type your query
+  utter_food_tracker:
+  - text: Here is the link to your[Food Tracker](https://dietbot-tracker.herokuapp.com/)...Happy Tracking!!!!
+actions:
+- utter_greet
+- utter_ask_diet
+- utter_ask_allergy
+- utter_ask_target_calories
+- action_meal_plan
+- utter_nutrition_question
+- action_nutrition
+- utter_food_question
+- action_recipe_answer
+- utter_type_que
+- action_food_answer
+forms: {}
+e2e_actions: []

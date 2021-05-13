@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+        <title>
+            Diet ChatBot
+        </title>
+        <link rel="stylesheet" href="Chatroom.css" />
+        <style>
+            .chat-container {
+                font-family: 'Ubuntu', sans-serif;
+                width: 370px;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                font-size: 20px;
+            }
+        </style>
+        <style>
+            body, html {
+              height: 100%;
+              margin: 0;
+            }
+
+            .bg {
+              /* The image used */
+              background-image: url("diet 10.jpeg");
+
+              /* Full height */
+              height: 100%;
+
+              /* Center and scale the image nicely */
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+           </style>
+    </head>
+    <div class="bg">
+        <body>
+            <div class="chat-container"></div>
+
+            <script src="Chatroom.js"/></script>
+            <script type="text/javascript">
+                var chatroom = window.Chatroom({
+                    host: "http://localhost:5021",
+                    title: "Diet ChatBot (chat with me)",
+                    fontFamily: 'Ubuntu',
+                    container: document.querySelector(".chat-container"),
+                    welcomeMessage: "My name is DietBOT, greet me to start a conversation!",
+                    speechRecognition: "en-US",
+                    height: "200px",
+                    fontSize: "50px"
+                });
+                console.log(chatroom);
+                $(document).ready(function() {
+                    setTimeout(function(){
+                        console.log(chatroom);
+                        chatroom.openChat();
+                    }, 1000);
+                    document.getElementById("submit_input").click();
+                });
+            </script>
+        </body>
+        </div>
+</html>
